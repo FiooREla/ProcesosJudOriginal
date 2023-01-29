@@ -36,35 +36,37 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Data.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraCharts.v18.2.UI, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraNavBar.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPivotGrid.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Images.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraScheduler.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraScheduler.v18.2.Core, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraTreeList.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Export, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.2.Wizard, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.2.UI, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.2.UI, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.2.Extensions, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Core.Desktop, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -104,11 +106,29 @@
     <Compile Include="FSistema.Designer.cs">
       <DependentUpon>FSistema.cs</DependentUpon>
     </Compile>
+    <Compile Include="Judicial\FActoProcesalArbitralEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FActoProcesalArbitralEdit.Designer.cs">
+      <DependentUpon>FActoProcesalArbitralEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FExpedienteArbitrales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FExpedienteArbitrales.Designer.cs">
+      <DependentUpon>FExpedienteArbitrales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Judicial\FExpedienteInstancia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Judicial\FExpedienteInstancia.Designer.cs">
       <DependentUpon>FExpedienteInstancia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FRListadosExpedientesArb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FRListadosExpedientesArb.Designer.cs">
+      <DependentUpon>FRListadosExpedientesArb.cs</DependentUpon>
     </Compile>
     <Compile Include="Judicial\FRListadosTrimestrales.cs">
       <SubType>Form</SubType>
@@ -127,6 +147,12 @@
     </Compile>
     <Compile Include="Judicial\FClaseProceso.Designer.cs">
       <DependentUpon>FClaseProceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\FSedeArbitral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FSedeArbitral.Designer.cs">
+      <DependentUpon>FSedeArbitral.cs</DependentUpon>
     </Compile>
     <Compile Include="Judicial\FUsuarios.cs">
       <SubType>Form</SubType>
@@ -188,6 +214,12 @@
     <Compile Include="Judicial\FOrganoJudicial.Designer.cs">
       <DependentUpon>FOrganoJudicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Judicial\RExpedienteDetalleArbitral.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Judicial\RExpedienteDetalleArbitral.designer.cs">
+      <DependentUpon>RExpedienteDetalleArbitral.cs</DependentUpon>
+    </Compile>
     <Compile Include="Judicial\RExpedienteDetalle.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -233,8 +265,17 @@
     <EmbeddedResource Include="FSistema.resx">
       <DependentUpon>FSistema.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FActoProcesalArbitralEdit.resx">
+      <DependentUpon>FActoProcesalArbitralEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FExpedienteArbitrales.resx">
+      <DependentUpon>FExpedienteArbitrales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Judicial\FExpedienteInstancia.resx">
       <DependentUpon>FExpedienteInstancia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FRListadosExpedientesArb.resx">
+      <DependentUpon>FRListadosExpedientesArb.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Judicial\FRListadosTrimestrales.resx">
       <DependentUpon>FRListadosTrimestrales.cs</DependentUpon>
@@ -244,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Judicial\FClaseProceso.resx">
       <DependentUpon>FClaseProceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FSedeArbitral.resx">
+      <DependentUpon>FSedeArbitral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Judicial\FUsuarios.resx">
       <DependentUpon>FUsuarios.cs</DependentUpon>
@@ -275,6 +319,9 @@
     <EmbeddedResource Include="Judicial\FOrganoJudicial.resx">
       <DependentUpon>FOrganoJudicial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\RExpedienteDetalleArbitral.resx">
+      <DependentUpon>RExpedienteDetalleArbitral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Judicial\RExpedienteDetalle.resx">
       <DependentUpon>RExpedienteDetalle.cs</DependentUpon>
     </EmbeddedResource>
@@ -298,6 +345,8 @@
     <None Include="Properties\DataSources\Sistema.Model.ActoProcesal.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.ActoProcesalContenido.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.ClaseProceso.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.Classes.SesionActual.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.ContextoModelo.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.Derecho.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.Documento.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.Empleado.datasource" />
@@ -311,21 +360,44 @@
     <None Include="Properties\DataSources\Sistema.Model.Opcion.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.OrganoExpedientePersona.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.OrganoJudicial.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.Partial.Juzgado.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.Partial.ObjectHelper.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.PersonaEmpresa.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.SalaJudicial.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.SedeJudicial.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoArbitraje.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoCentroArbitral.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.TipoContenido.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoContingencia.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoDerecho.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoDocumentoAdd.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoEtapaProceso.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoFiltro.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoInternoContenido.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.TipoInternoPersona.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoLaudoFavor.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoModalidad.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoMoneda.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoNotificacionEx.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoOrganoJudicial.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.TipoPersona.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.TipoProceso.datasource" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\DataSources\Sistema.Model.TipoUbicacion.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.uspExpedientesJudicialesClaseProcesoTotales_Result.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.uspExpedientesJudicialesSedeJudicialTotales_Result.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.uspExpedientesJudicialesTotales_Result.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.uspExpedientesJudicialesTotales_Result1.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.Usuario.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.viewEstructuraTotales.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.viewExpediente.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.viewExpedienteInstancia.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.viewExpedienteReport.datasource" />
+    <None Include="Properties\DataSources\Sistema.Model.VLocalidad.datasource" />
     <None Include="Properties\DataSources\Sistema.UI.Judicial.templateEx.datasource" />
     <None Include="Resources\place32x32.png" />
   </ItemGroup>
@@ -460,6 +532,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fondo ELP3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Otros\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
