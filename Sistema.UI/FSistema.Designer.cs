@@ -69,6 +69,7 @@
             this.G4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.nbUsuarios = new DevExpress.XtraNavBar.NavBarItem();
             this.nbOpciones = new DevExpress.XtraNavBar.NavBarItem();
+            this.nbDocumento = new DevExpress.XtraNavBar.NavBarItem();
             this.G6 = new DevExpress.XtraNavBar.NavBarGroup();
             this.nbConfigurarReporte = new DevExpress.XtraNavBar.NavBarItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -94,7 +95,9 @@
             this.barButtonItem2,
             this.barButtonItem3,
             this.barButtonItem1});
+            this.RibbonPrincipal.Margin = new System.Windows.Forms.Padding(4);
             this.RibbonPrincipal.MaxItemId = 206;
+            this.RibbonPrincipal.OptionsMenuMinWidth = 385;
             // 
             // 
             // 
@@ -102,12 +105,13 @@
             this.RibbonPrincipal.SearchEditItem.EditWidth = 150;
             this.RibbonPrincipal.SearchEditItem.Id = -5000;
             this.RibbonPrincipal.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.RibbonPrincipal.Size = new System.Drawing.Size(745, 142);
+            this.RibbonPrincipal.Size = new System.Drawing.Size(869, 175);
             // 
             // StatusBarPrincipal
             // 
-            this.StatusBarPrincipal.Location = new System.Drawing.Point(0, 741);
-            this.StatusBarPrincipal.Size = new System.Drawing.Size(745, 33);
+            this.StatusBarPrincipal.Location = new System.Drawing.Point(0, 882);
+            this.StatusBarPrincipal.Margin = new System.Windows.Forms.Padding(4);
+            this.StatusBarPrincipal.Size = new System.Drawing.Size(869, 39);
             // 
             // bbiCerrarSesion
             // 
@@ -151,19 +155,21 @@
             this.dpMenu.Controls.Add(this.dockPanel1_Container);
             this.dpMenu.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dpMenu.ID = new System.Guid("274a6322-6501-454c-8cc2-bba71e39b7ef");
-            this.dpMenu.Location = new System.Drawing.Point(0, 142);
+            this.dpMenu.Location = new System.Drawing.Point(0, 175);
+            this.dpMenu.Margin = new System.Windows.Forms.Padding(4);
             this.dpMenu.Name = "dpMenu";
             this.dpMenu.Options.ShowCloseButton = false;
             this.dpMenu.OriginalSize = new System.Drawing.Size(352, 200);
-            this.dpMenu.Size = new System.Drawing.Size(235, 599);
+            this.dpMenu.Size = new System.Drawing.Size(352, 707);
             this.dpMenu.Text = "Menú del Sistema";
             // 
             // dockPanel1_Container
             // 
             this.dockPanel1_Container.Controls.Add(this.vbcMenu);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(3, 24);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 27);
+            this.dockPanel1_Container.Margin = new System.Windows.Forms.Padding(4);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(228, 572);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(342, 676);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // vbcMenu
@@ -205,11 +211,13 @@
             this.nbMateriaControvertida,
             this.nbSedeArbitral,
             this.nbListadoArbitrajes,
-            this.nbEstadoActualActoProcesal});
+            this.nbEstadoActualActoProcesal,
+            this.nbDocumento});
             this.vbcMenu.Location = new System.Drawing.Point(0, 0);
+            this.vbcMenu.Margin = new System.Windows.Forms.Padding(4);
             this.vbcMenu.Name = "vbcMenu";
-            this.vbcMenu.OptionsNavPane.ExpandedWidth = 228;
-            this.vbcMenu.Size = new System.Drawing.Size(228, 572);
+            this.vbcMenu.OptionsNavPane.ExpandedWidth = 342;
+            this.vbcMenu.Size = new System.Drawing.Size(342, 676);
             this.vbcMenu.TabIndex = 0;
             this.vbcMenu.Text = "navBarControl1";
             this.vbcMenu.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.vbcMenu_LinkClicked);
@@ -469,7 +477,8 @@
             this.G4.Expanded = true;
             this.G4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.nbUsuarios),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbOpciones)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nbOpciones),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nbDocumento)});
             this.G4.Name = "G4";
             this.G4.Visible = false;
             // 
@@ -488,6 +497,12 @@
             this.nbOpciones.Name = "nbOpciones";
             this.nbOpciones.Visible = false;
             this.nbOpciones.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem2_LinkClicked);
+            // 
+            // nbDocumento
+            // 
+            this.nbDocumento.Caption = "Cargar Documento";
+            this.nbDocumento.Name = "nbDocumento";
+            this.nbDocumento.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbDocumento_LinkClicked);
             // 
             // G6
             // 
@@ -517,11 +532,12 @@
             // 
             // FSistema
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 774);
+            this.ClientSize = new System.Drawing.Size(869, 921);
             this.Controls.Add(this.dpMenu);
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("FSistema.IconOptions.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FSistema";
             this.Text = "PROCESOS JUDICIALES ELECTROPERU";
             this.Load += new System.EventHandler(this.FSistema_Load);
@@ -582,5 +598,6 @@
         private DevExpress.XtraNavBar.NavBarItem nbSedeArbitral;
         private DevExpress.XtraNavBar.NavBarItem nbListadoArbitrajes;
         private DevExpress.XtraNavBar.NavBarItem nbEstadoActualActoProcesal;
+        private DevExpress.XtraNavBar.NavBarItem nbDocumento;
     }
 }

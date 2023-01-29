@@ -124,6 +124,12 @@
     <Compile Include="Judicial\FExpedienteInstancia.Designer.cs">
       <DependentUpon>FExpedienteInstancia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Judicial\FRListadosDocumentosPendientesDeCarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\FRListadosDocumentosPendientesDeCarga.Designer.cs">
+      <DependentUpon>FRListadosDocumentosPendientesDeCarga.cs</DependentUpon>
+    </Compile>
     <Compile Include="Judicial\FRListadosExpedientesArb.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Judicial\FExpedienteInstancia.resx">
       <DependentUpon>FExpedienteInstancia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\FRListadosDocumentosPendientesDeCarga.resx">
+      <DependentUpon>FRListadosDocumentosPendientesDeCarga.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Judicial\FRListadosExpedientesArb.resx">
       <DependentUpon>FRListadosExpedientesArb.cs</DependentUpon>
