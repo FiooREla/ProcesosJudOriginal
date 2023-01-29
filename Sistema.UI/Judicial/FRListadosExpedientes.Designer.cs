@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRListadosExpedientes));
             this.bsLista = new System.Windows.Forms.BindingSource(this.components);
             this.printingSystem1 = new DevExpress.XtraPrinting.PrintingSystem(this.components);
             this.printableComponentLink1 = new DevExpress.XtraPrinting.PrintableComponentLink(this.components);
@@ -82,14 +81,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.RibbonForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsLista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.printingSystem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.printableComponentLink1.ImageCollection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deFin.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deFin.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deFin.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deInicio.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deInicio.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deInicio.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -101,8 +99,16 @@
             // RibbonForm
             // 
             this.RibbonForm.ExpandCollapseItem.Id = 0;
-            this.RibbonForm.ExpandCollapseItem.Name = "";
-            this.RibbonForm.Size = new System.Drawing.Size(758, 113);
+            this.RibbonForm.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.RibbonForm.OptionsMenuMinWidth = 449;
+            // 
+            // 
+            // 
+            this.RibbonForm.SearchEditItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
+            this.RibbonForm.SearchEditItem.EditWidth = 150;
+            this.RibbonForm.SearchEditItem.Id = -5000;
+            this.RibbonForm.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.RibbonForm.Size = new System.Drawing.Size(884, 153);
             // 
             // bsLista
             // 
@@ -116,22 +122,19 @@
             // printableComponentLink1
             // 
             this.printableComponentLink1.Component = this.gridControl1;
-            // 
-            // 
-            // 
-            this.printableComponentLink1.ImageCollection.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("printableComponentLink1.ImageCollection.ImageStream")));
             this.printableComponentLink1.PaperKind = System.Drawing.Printing.PaperKind.A3;
-            this.printableComponentLink1.PrintingSystem = this.printingSystem1;
             this.printableComponentLink1.PrintingSystemBase = this.printingSystem1;
             // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.bsLista;
-            this.gridControl1.Location = new System.Drawing.Point(12, 38);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gridControl1.Location = new System.Drawing.Point(14, 45);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridControl1.MenuManager = this.RibbonForm;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(734, 234);
+            this.gridControl1.Size = new System.Drawing.Size(856, 276);
             this.gridControl1.TabIndex = 7;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -174,6 +177,7 @@
             this.colNDemandados,
             this.colNDemandantes,
             this.colFechaAvisoAlertaActoPro});
+            this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -181,218 +185,278 @@
             // colIdExpediente
             // 
             this.colIdExpediente.FieldName = "IdExpediente";
+            this.colIdExpediente.MinWidth = 23;
             this.colIdExpediente.Name = "colIdExpediente";
+            this.colIdExpediente.Width = 87;
             // 
             // colCodigo
             // 
             this.colCodigo.FieldName = "Codigo";
+            this.colCodigo.MinWidth = 23;
             this.colCodigo.Name = "colCodigo";
             this.colCodigo.Visible = true;
             this.colCodigo.VisibleIndex = 0;
-            this.colCodigo.Width = 85;
+            this.colCodigo.Width = 99;
             // 
             // colIdTipoProceso
             // 
             this.colIdTipoProceso.FieldName = "IdTipoProceso";
+            this.colIdTipoProceso.MinWidth = 23;
             this.colIdTipoProceso.Name = "colIdTipoProceso";
+            this.colIdTipoProceso.Width = 87;
             // 
             // colDescripcionTipoProceso
             // 
             this.colDescripcionTipoProceso.Caption = "Tipo Proceso";
             this.colDescripcionTipoProceso.FieldName = "DescripcionTipoProceso";
+            this.colDescripcionTipoProceso.MinWidth = 23;
             this.colDescripcionTipoProceso.Name = "colDescripcionTipoProceso";
             this.colDescripcionTipoProceso.Visible = true;
             this.colDescripcionTipoProceso.VisibleIndex = 5;
-            this.colDescripcionTipoProceso.Width = 119;
+            this.colDescripcionTipoProceso.Width = 139;
             // 
             // colFechaInicio
             // 
             this.colFechaInicio.Caption = "Fecha";
             this.colFechaInicio.FieldName = "FechaInicio";
+            this.colFechaInicio.MinWidth = 23;
             this.colFechaInicio.Name = "colFechaInicio";
             this.colFechaInicio.Visible = true;
             this.colFechaInicio.VisibleIndex = 1;
-            this.colFechaInicio.Width = 89;
+            this.colFechaInicio.Width = 104;
             // 
             // colIdDemandante
             // 
             this.colIdDemandante.FieldName = "IdDemandante";
+            this.colIdDemandante.MinWidth = 23;
             this.colIdDemandante.Name = "colIdDemandante";
+            this.colIdDemandante.Width = 87;
             // 
             // colNombreDemandante
             // 
             this.colNombreDemandante.Caption = "Demandante";
             this.colNombreDemandante.FieldName = "NombreDemandante";
+            this.colNombreDemandante.MinWidth = 23;
             this.colNombreDemandante.Name = "colNombreDemandante";
             this.colNombreDemandante.Visible = true;
             this.colNombreDemandante.VisibleIndex = 2;
-            this.colNombreDemandante.Width = 124;
+            this.colNombreDemandante.Width = 145;
             // 
             // colNroDocumentoDemandante
             // 
             this.colNroDocumentoDemandante.FieldName = "NroDocumentoDemandante";
+            this.colNroDocumentoDemandante.MinWidth = 23;
             this.colNroDocumentoDemandante.Name = "colNroDocumentoDemandante";
+            this.colNroDocumentoDemandante.Width = 87;
             // 
             // colIdDemandado
             // 
             this.colIdDemandado.FieldName = "IdDemandado";
+            this.colIdDemandado.MinWidth = 23;
             this.colIdDemandado.Name = "colIdDemandado";
+            this.colIdDemandado.Width = 87;
             // 
             // colNombreDemandado
             // 
             this.colNombreDemandado.Caption = "Demandado";
             this.colNombreDemandado.FieldName = "NombreDemandado";
+            this.colNombreDemandado.MinWidth = 23;
             this.colNombreDemandado.Name = "colNombreDemandado";
             this.colNombreDemandado.Visible = true;
             this.colNombreDemandado.VisibleIndex = 3;
-            this.colNombreDemandado.Width = 124;
+            this.colNombreDemandado.Width = 145;
             // 
             // colDocumentoDemandado
             // 
             this.colDocumentoDemandado.FieldName = "DocumentoDemandado";
+            this.colDocumentoDemandado.MinWidth = 23;
             this.colDocumentoDemandado.Name = "colDocumentoDemandado";
+            this.colDocumentoDemandado.Width = 87;
             // 
             // colIdClaseProceso
             // 
             this.colIdClaseProceso.FieldName = "IdClaseProceso";
+            this.colIdClaseProceso.MinWidth = 23;
             this.colIdClaseProceso.Name = "colIdClaseProceso";
+            this.colIdClaseProceso.Width = 87;
             // 
             // colDescripcionClaseProceso
             // 
             this.colDescripcionClaseProceso.Caption = "Clase Proceso";
             this.colDescripcionClaseProceso.FieldName = "DescripcionClaseProceso";
+            this.colDescripcionClaseProceso.MinWidth = 23;
             this.colDescripcionClaseProceso.Name = "colDescripcionClaseProceso";
             this.colDescripcionClaseProceso.Visible = true;
             this.colDescripcionClaseProceso.VisibleIndex = 6;
-            this.colDescripcionClaseProceso.Width = 155;
+            this.colDescripcionClaseProceso.Width = 181;
             // 
             // colSiglaClaseProceso
             // 
             this.colSiglaClaseProceso.FieldName = "SiglaClaseProceso";
+            this.colSiglaClaseProceso.MinWidth = 23;
             this.colSiglaClaseProceso.Name = "colSiglaClaseProceso";
+            this.colSiglaClaseProceso.Width = 87;
             // 
             // colDescripcion
             // 
             this.colDescripcion.FieldName = "Descripcion";
+            this.colDescripcion.MinWidth = 23;
             this.colDescripcion.Name = "colDescripcion";
             this.colDescripcion.Visible = true;
             this.colDescripcion.VisibleIndex = 4;
-            this.colDescripcion.Width = 149;
+            this.colDescripcion.Width = 174;
             // 
             // colObservacion
             // 
             this.colObservacion.FieldName = "Observacion";
+            this.colObservacion.MinWidth = 23;
             this.colObservacion.Name = "colObservacion";
+            this.colObservacion.Width = 87;
             // 
             // colIdAbogado
             // 
             this.colIdAbogado.FieldName = "IdAbogado";
+            this.colIdAbogado.MinWidth = 23;
             this.colIdAbogado.Name = "colIdAbogado";
+            this.colIdAbogado.Width = 87;
             // 
             // colNombreAbogado
             // 
             this.colNombreAbogado.FieldName = "NombreAbogado";
+            this.colNombreAbogado.MinWidth = 23;
             this.colNombreAbogado.Name = "colNombreAbogado";
+            this.colNombreAbogado.Width = 87;
             // 
             // colDocumentoAbogado
             // 
             this.colDocumentoAbogado.FieldName = "DocumentoAbogado";
+            this.colDocumentoAbogado.MinWidth = 23;
             this.colDocumentoAbogado.Name = "colDocumentoAbogado";
+            this.colDocumentoAbogado.Width = 87;
             // 
             // colIdExpedientePadre
             // 
             this.colIdExpedientePadre.FieldName = "IdExpedientePadre";
+            this.colIdExpedientePadre.MinWidth = 23;
             this.colIdExpedientePadre.Name = "colIdExpedientePadre";
+            this.colIdExpedientePadre.Width = 87;
             // 
             // colIdNEWID
             // 
             this.colIdNEWID.FieldName = "IdNEWID";
+            this.colIdNEWID.MinWidth = 23;
             this.colIdNEWID.Name = "colIdNEWID";
+            this.colIdNEWID.Width = 87;
             // 
             // colFechaMovimiento
             // 
             this.colFechaMovimiento.FieldName = "FechaMovimiento";
+            this.colFechaMovimiento.MinWidth = 23;
             this.colFechaMovimiento.Name = "colFechaMovimiento";
+            this.colFechaMovimiento.Width = 87;
             // 
             // colNroInstancia
             // 
             this.colNroInstancia.FieldName = "NroInstancia";
+            this.colNroInstancia.MinWidth = 23;
             this.colNroInstancia.Name = "colNroInstancia";
+            this.colNroInstancia.Width = 87;
             // 
             // colMontoSoles
             // 
             this.colMontoSoles.FieldName = "MontoSoles";
+            this.colMontoSoles.MinWidth = 23;
             this.colMontoSoles.Name = "colMontoSoles";
             this.colMontoSoles.Visible = true;
             this.colMontoSoles.VisibleIndex = 7;
-            this.colMontoSoles.Width = 93;
+            this.colMontoSoles.Width = 108;
             // 
             // colMontoDolares
             // 
             this.colMontoDolares.FieldName = "MontoDolares";
+            this.colMontoDolares.MinWidth = 23;
             this.colMontoDolares.Name = "colMontoDolares";
+            this.colMontoDolares.Width = 87;
             // 
             // colIdExpedienteInstancia
             // 
             this.colIdExpedienteInstancia.FieldName = "IdExpedienteInstancia";
+            this.colIdExpedienteInstancia.MinWidth = 23;
             this.colIdExpedienteInstancia.Name = "colIdExpedienteInstancia";
+            this.colIdExpedienteInstancia.Width = 87;
             // 
             // colIdInstancia
             // 
             this.colIdInstancia.FieldName = "IdInstancia";
+            this.colIdInstancia.MinWidth = 23;
             this.colIdInstancia.Name = "colIdInstancia";
+            this.colIdInstancia.Width = 87;
             // 
             // colDescripcionInstancia
             // 
             this.colDescripcionInstancia.Caption = "Instancia";
             this.colDescripcionInstancia.FieldName = "DescripcionInstancia";
+            this.colDescripcionInstancia.MinWidth = 23;
             this.colDescripcionInstancia.Name = "colDescripcionInstancia";
             this.colDescripcionInstancia.Visible = true;
             this.colDescripcionInstancia.VisibleIndex = 8;
-            this.colDescripcionInstancia.Width = 119;
+            this.colDescripcionInstancia.Width = 139;
             // 
             // colIdActoPro
             // 
             this.colIdActoPro.FieldName = "IdActoPro";
+            this.colIdActoPro.MinWidth = 23;
             this.colIdActoPro.Name = "colIdActoPro";
+            this.colIdActoPro.Width = 87;
             // 
             // colCodigoActoProcesal
             // 
             this.colCodigoActoProcesal.FieldName = "CodigoActoProcesal";
+            this.colCodigoActoProcesal.MinWidth = 23;
             this.colCodigoActoProcesal.Name = "colCodigoActoProcesal";
+            this.colCodigoActoProcesal.Width = 87;
             // 
             // colContenidoActoProcesal
             // 
             this.colContenidoActoProcesal.Caption = "Acto Procesal";
             this.colContenidoActoProcesal.FieldName = "ContenidoActoProcesal";
+            this.colContenidoActoProcesal.MinWidth = 23;
             this.colContenidoActoProcesal.Name = "colContenidoActoProcesal";
             this.colContenidoActoProcesal.Visible = true;
             this.colContenidoActoProcesal.VisibleIndex = 9;
-            this.colContenidoActoProcesal.Width = 123;
+            this.colContenidoActoProcesal.Width = 143;
             // 
             // colFechaRegistroActoPro
             // 
             this.colFechaRegistroActoPro.FieldName = "FechaRegistroActoPro";
+            this.colFechaRegistroActoPro.MinWidth = 23;
             this.colFechaRegistroActoPro.Name = "colFechaRegistroActoPro";
+            this.colFechaRegistroActoPro.Width = 87;
             // 
             // colNDemandados
             // 
             this.colNDemandados.FieldName = "NDemandados";
+            this.colNDemandados.MinWidth = 23;
             this.colNDemandados.Name = "colNDemandados";
             this.colNDemandados.Visible = true;
             this.colNDemandados.VisibleIndex = 10;
+            this.colNDemandados.Width = 87;
             // 
             // colNDemandantes
             // 
             this.colNDemandantes.FieldName = "NDemandantes";
+            this.colNDemandantes.MinWidth = 23;
             this.colNDemandantes.Name = "colNDemandantes";
             this.colNDemandantes.Visible = true;
             this.colNDemandantes.VisibleIndex = 11;
+            this.colNDemandantes.Width = 87;
             // 
             // colFechaAvisoAlertaActoPro
             // 
             this.colFechaAvisoAlertaActoPro.FieldName = "FechaAvisoAlertaActoPro";
+            this.colFechaAvisoAlertaActoPro.MinWidth = 23;
             this.colFechaAvisoAlertaActoPro.Name = "colFechaAvisoAlertaActoPro";
+            this.colFechaAvisoAlertaActoPro.Width = 87;
             // 
             // layoutControl1
             // 
@@ -401,20 +465,22 @@
             this.layoutControl1.Controls.Add(this.deFin);
             this.layoutControl1.Controls.Add(this.deInicio);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 113);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 153);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(758, 284);
+            this.layoutControl1.Size = new System.Drawing.Size(884, 335);
             this.layoutControl1.TabIndex = 2;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // btnMostrar
             // 
             this.btnMostrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMostrar.Image = global::Sistema.UI.Properties.Resources.Search216x16;
-            this.btnMostrar.Location = new System.Drawing.Point(565, 12);
+            this.btnMostrar.ImageOptions.Image = global::Sistema.UI.Properties.Resources.Search216x16;
+            this.btnMostrar.Location = new System.Drawing.Point(659, 14);
+            this.btnMostrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(181, 22);
+            this.btnMostrar.Size = new System.Drawing.Size(211, 27);
             this.btnMostrar.StyleController = this.layoutControl1;
             this.btnMostrar.TabIndex = 6;
             this.btnMostrar.Text = "Actualizar Listado";
@@ -423,28 +489,30 @@
             // deFin
             // 
             this.deFin.EditValue = null;
-            this.deFin.Location = new System.Drawing.Point(358, 12);
+            this.deFin.Location = new System.Drawing.Point(429, 14);
+            this.deFin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deFin.MenuManager = this.RibbonForm;
             this.deFin.Name = "deFin";
             this.deFin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deFin.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deFin.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.deFin.Size = new System.Drawing.Size(203, 20);
+            this.deFin.Size = new System.Drawing.Size(226, 22);
             this.deFin.StyleController = this.layoutControl1;
             this.deFin.TabIndex = 5;
             // 
             // deInicio
             // 
             this.deInicio.EditValue = null;
-            this.deInicio.Location = new System.Drawing.Point(70, 12);
+            this.deInicio.Location = new System.Drawing.Point(93, 14);
+            this.deInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deInicio.MenuManager = this.RibbonForm;
             this.deInicio.Name = "deInicio";
             this.deInicio.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deInicio.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deInicio.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.deInicio.Size = new System.Drawing.Size(226, 20);
+            this.deInicio.Size = new System.Drawing.Size(253, 22);
             this.deInicio.StyleController = this.layoutControl1;
             this.deInicio.TabIndex = 4;
             // 
@@ -458,10 +526,8 @@
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(758, 284);
-            this.layoutControlGroup1.Text = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(884, 335);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -470,50 +536,47 @@
             this.layoutControlItem1.CustomizationFormText = "Fecha Incio";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(288, 26);
+            this.layoutControlItem1.Size = new System.Drawing.Size(336, 31);
             this.layoutControlItem1.Text = "Fecha Incio";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(55, 13);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(65, 16);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.deFin;
             this.layoutControlItem2.CustomizationFormText = "Fecha Fin";
-            this.layoutControlItem2.Location = new System.Drawing.Point(288, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(336, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(265, 26);
+            this.layoutControlItem2.Size = new System.Drawing.Size(309, 31);
             this.layoutControlItem2.Text = "Fecha Fin";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(55, 13);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(65, 16);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnMostrar;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(553, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(645, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(185, 26);
-            this.layoutControlItem3.Text = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(215, 31);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextToControlDistance = 0;
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.gridControl1;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 26);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 31);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(738, 238);
-            this.layoutControlItem4.Text = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(860, 280);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextToControlDistance = 0;
             this.layoutControlItem4.TextVisible = false;
             // 
             // FRListadosExpedientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 423);
+            this.ClientSize = new System.Drawing.Size(884, 521);
             this.Controls.Add(this.layoutControl1);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "FRListadosExpedientes";
             this.Tag = "LISTA";
             this.Text = "Listado - Expedientes ";
@@ -522,14 +585,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.RibbonForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsLista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.printingSystem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.printableComponentLink1.ImageCollection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.deFin.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deFin.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deFin.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deInicio.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deInicio.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deInicio.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -537,6 +599,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -440,7 +440,10 @@ namespace Sistema.UI
         {
             FnOpcion(typeof(FSedeArbitral), sender, "");
         }
-
+        private void nbDocumento_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            FnOpcion(typeof(FRListadosDocumentosPendientesDeCarga), sender, "");
+        }
         private void nbListadoArbitrajes_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             FnOpcion(typeof(FRListadosExpedientesArb), sender, "");
