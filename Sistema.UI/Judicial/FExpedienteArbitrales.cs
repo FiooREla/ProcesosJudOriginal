@@ -41,16 +41,18 @@ namespace Sistema.UI.Judicial
         public FExpedienteArbitrales()
         {
             InitializeComponent();
-            rbtnFechaInicio.EditValue = Convert.ToDateTime("01/01/" + DateTime.Now.Year);
-            rbtnFechaFin.EditValue = DateTime.Now.ToShortDateString();
+            rbtnFechaInicio.Enabled = false;
+            rbtnFechaFin.Enabled = false;
+            DateTime  fechaInicialBusqueda = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            rbtnFechaInicio.EditValue = fechaInicialBusqueda.ToShortDateString();
+            rbtnFechaFin.EditValue = fechaInicialBusqueda.AddMonths(1).AddDays(-1).ToShortDateString();
             this.Maximizado = true;
             DataLoad();
         }
 
         private void DataLoad()
         {
-            DateTime ddFechaInicio =
-                Convert.ToDateTime(Convert.ToDateTime(rbtnFechaInicio.EditValue).ToShortDateString());
+            DateTime ddFechaInicio = Convert.ToDateTime(Convert.ToDateTime(rbtnFechaInicio.EditValue).ToShortDateString());
             DateTime ddFechaFin = Convert.ToDateTime(Convert.ToDateTime(rbtnFechaFin.EditValue).ToShortDateString());
 
             bsLista.DataSource =
@@ -128,6 +130,9 @@ namespace Sistema.UI.Judicial
 
 
             Ctrls.Glue.FnRpiGluePersonaAbogados(rpiAbogadoPorEstudio, "ABOGADOS");
+
+            rbtnFechaInicio.Enabled = true;
+            rbtnFechaFin.Enabled = true;
         }
 
         private void bsLista_CurrentChanged(object sender, EventArgs e)
@@ -336,13 +341,13 @@ namespace Sistema.UI.Judicial
                     oExpediente.IdDemandado = null;
                     oExpediente.NDemandados = "";
                 }
-
-                var lExpedienteExis = CtxModelo.Expediente.Where(x => x.IdDemandante == oExpediente.IdDemandante && oExpediente.IdDemandante != 289).ToList();
-                if (lExpedienteExis.Count > 0 && TipoEdicion == EnumEdicion.Nuevo)
-                {
-                    var oMail = new Control.clsMail();
-                    oMail.FnMail_DemandasExistentes(oExpediente.NDemandantes, lExpedienteExis);
-                }
+                //// CONSULTAR FIO
+                //var lExpedienteExis = CtxModelo.Expediente.Where(x => x.IdDemandante == oExpediente.IdDemandante && oExpediente.IdDemandante != 289).ToList();
+                //if (lExpedienteExis.Count > 0 && TipoEdicion == EnumEdicion.Nuevo)
+                //{
+                //    var oMail = new Control.clsMail();
+                //    oMail.FnMail_DemandasExistentes(oExpediente.NDemandantes, lExpedienteExis);
+                //}
 
             }
 
@@ -664,7 +669,7 @@ namespace Sistema.UI.Judicial
             if (files.Count() == 0) return;
             if (gridView3.FocusedRowHandle < 0)
             {
-                Documento oFileInsert = (Documento)bsDocumentos.Current;
+                //Documento oFileInsert = (Documento)bsDocumentos.Current;
                 foreach (var item in files)
                 {
 
@@ -678,13 +683,13 @@ namespace Sistema.UI.Judicial
                     bsDocumentos.MoveLast();
 
                     //    txtRutaFile.Text = sRuta;
-                    ((Documento)bsDocumentos.Current).Tipo = oFileInsert.Tipo;
+                    ((Documento)bsDocumentos.Current).Tipo = null;
                     ((Documento)bsDocumentos.Current).IdNEWID = EntidadExpediente.IdNEWID;
                     ((Documento)bsDocumentos.Current).Nombre = Path.GetFileNameWithoutExtension(item);
                     ((Documento)bsDocumentos.Current).Documento1 = ExtFile.FileToBits(item);
                     ((Documento)bsDocumentos.Current).Extension = Path.GetExtension(item);
-                    ((Documento)bsDocumentos.Current).RutaPc = item;
-                    bsDocumentos.Remove(oFileInsert);
+                    ((Documento)bsDocumentos.Current).RutaPc = GestionDeDocumentos.GenerarRutaPorDefecto(Path.GetFileName(item));
+                    // bsDocumentos.Remove(oFileInsert);
                 }
 
 
@@ -696,7 +701,7 @@ namespace Sistema.UI.Judicial
                 ((Documento)bsDocumentos.Current).Nombre = Path.GetFileNameWithoutExtension(files[0]);
                 ((Documento)bsDocumentos.Current).Documento1 = ExtFile.FileToBits(files[0]);
                 ((Documento)bsDocumentos.Current).Extension = Path.GetExtension(files[0]);
-                ((Documento)bsDocumentos.Current).RutaPc = files[0];
+                ((Documento)bsDocumentos.Current).RutaPc = GestionDeDocumentos.GenerarRutaPorDefecto(Path.GetFileName(files[0]));
 
             }
             //    txtRutaFile.Text = sRuta;
@@ -726,18 +731,25 @@ namespace Sistema.UI.Judicial
                 MessageBox.Show("Error: No contiene Ningun Archivo.");
                 return;
             }
-            Ext.ExtFile.MostrarDocumentoCreado(oFile.Documento1, oFile.Nombre + oFile.Extension);
+            if (oFile.RutaPc != null || oFile.RutaPc =="")
+            {
+                Ext.ExtFile.MostrarDocumentoCreado(oFile.RutaPc);
+            }
+            
         }
 
         private void rbtnFechaInicio_EditValueChanged(object sender, EventArgs e)
         {
-            CargarDatosFecha();
+            if (rbtnFechaInicio.Enabled)
+            {
+                CargarDatosFecha();
+            }
+            
         }
 
         private void CargarDatosFecha()
         {
-            DateTime ddFechaInicio =
-                Convert.ToDateTime(Convert.ToDateTime(rbtnFechaInicio.EditValue).ToShortDateString());
+            DateTime ddFechaInicio = Convert.ToDateTime(Convert.ToDateTime(rbtnFechaInicio.EditValue).ToShortDateString());
             DateTime ddFechaFin = Convert.ToDateTime(Convert.ToDateTime(rbtnFechaFin.EditValue).ToShortDateString());
             bsLista.DataSource =
                 CtxModelo.viewExpediente.Where(x => x.FechaInicio >= ddFechaInicio && x.FechaInicio <= ddFechaFin && x.TipoExpediente == "EXPEDIENTEARBITRAL");
@@ -745,7 +757,10 @@ namespace Sistema.UI.Judicial
 
         private void rbtnFechaFin_EditValueChanged(object sender, EventArgs e)
         {
-            CargarDatosFecha();
+             if (rbtnFechaInicio.Enabled)
+            {
+                CargarDatosFecha();
+            }
         }
 
         private void btnReporte_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -1027,6 +1042,11 @@ namespace Sistema.UI.Judicial
             ColumnView view = edit.Properties.View;
             int countryCode = Convert.ToInt32(gridView11.GetFocusedRowCellValue("IdAsesorLegalEstudio"));
             view.ActiveFilterCriteria = DevExpress.Data.Filtering.CriteriaOperator.Parse("[IdEmpresa] == ?", countryCode)  ;
+        }
+
+        private void gridControl4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
