@@ -36,6 +36,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Aspose.PDF, Version=23.1.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.PDF.23.1.0\lib\net4.0\Aspose.PDF.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -68,10 +72,17 @@
     <Reference Include="DevExpress.XtraScheduler.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -232,6 +243,7 @@
     <Compile Include="Judicial\RExpedienteDetalle.designer.cs">
       <DependentUpon>RExpedienteDetalle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Otros\ComboBoxItem.cs" />
     <Compile Include="Persona\FInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -350,6 +362,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\Sistema.Model.ActoJudicial.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.ActoProcesal.datasource" />
     <None Include="Properties\DataSources\Sistema.Model.ActoProcesalContenido.datasource" />
@@ -542,9 +555,7 @@
   <ItemGroup>
     <None Include="Resources\Fondo ELP3.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Otros\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

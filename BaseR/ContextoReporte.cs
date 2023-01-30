@@ -16,7 +16,7 @@ namespace BaseR
             sqlBuilder.InitialCatalog = "SIGPJTEST";
             sqlBuilder.IntegratedSecurity = true;
             sqlBuilder.ConnectionString = "server=" + BaseSession.BD_Server + ";user id=" + BaseSession.BD_User + ";password=" +
-                                          BaseSession.BD_Password + ";initial catalog=SIGPJTEST";
+                                          BaseSession.BD_Password + ";initial catalog=SIG-PJ";
 
             var entityBuilder = new EntityConnectionStringBuilder();
             entityBuilder.Provider = "System.Data.SqlClient";
