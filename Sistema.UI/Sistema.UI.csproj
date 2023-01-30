@@ -117,6 +117,7 @@
     <Compile Include="FSistema.Designer.cs">
       <DependentUpon>FSistema.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionDeDocumentos.cs" />
     <Compile Include="Judicial\FActoProcesalArbitralEdit.cs">
       <SubType>Form</SubType>
     </Compile>

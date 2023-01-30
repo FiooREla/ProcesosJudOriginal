@@ -71,7 +71,34 @@ namespace Ext
                 }
             }
         }
+        public static void MostrarDocumentoCreado(string NameFile)
+        {
+            
+            Process pIniciarArchivo = new Process();
+            pIniciarArchivo.StartInfo.FileName = NameFile;
+            pIniciarArchivo.StartInfo.Arguments = "";
+            pIniciarArchivo.Start();
+            //MessageBox.Show("Continuar con el Sistema", "[SISTEMA]", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            try
+            {
+                pIniciarArchivo.Close();
+                //System.IO.File.Delete(NameFile);
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                try
+                {
+                    //System.IO.File.Delete(NameFile);
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+        }
         public static string DocumentoCreadoFileMail(byte[] bFile, string NameFile)
         {
             

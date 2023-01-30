@@ -23,9 +23,8 @@ namespace Sistema.UI.Judicial
     public partial class FRListadosDocumentosPendientesDeCarga : FBaseForm
     {
 
-        public enum EstadoDeFiltro {   Todos , PendientesDeCarga , Cargados };
-        private const int numeroDeDocumentos = 50;
-        private string rutaAGuardar = "D:\\Archivos";
+        public enum EstadoDeFiltro {   SinArchivos , PendientesDeCarga , Cargados };
+        private const int numeroDeDocumentos = 2000;
         private List<Documento> listaDocumentos = new List<Documento>();
         private List<Documento> listaDocumentosCreados=new List<Documento>();
         public EstadoDeFiltro estadoDeFiltroActual =  EstadoDeFiltro.PendientesDeCarga;
@@ -48,7 +47,7 @@ namespace Sistema.UI.Judicial
             {
                 coll.Add(new ComboItem() { Codigo = EstadoDeFiltro.Cargados, Valor = EstadoDeFiltro.Cargados.ToString() });
                 coll.Add(new ComboItem() { Codigo = EstadoDeFiltro.PendientesDeCarga, Valor = EstadoDeFiltro.PendientesDeCarga.ToString() });
-                coll.Add(new ComboItem() { Codigo = EstadoDeFiltro.Todos, Valor = EstadoDeFiltro.Todos.ToString() });
+                coll.Add(new ComboItem() { Codigo = EstadoDeFiltro.SinArchivos, Valor = EstadoDeFiltro.SinArchivos.ToString() });
 
             }
             finally
@@ -75,16 +74,16 @@ namespace Sistema.UI.Judicial
             {
                 if (estadoDeFiltro == EstadoDeFiltro.Cargados)
                 {
-                    listaDocumentos = CtxModelo.Documento.Where(x => x.RutaPc != null).Take(numeroDeDocumentos).ToList();
+                    listaDocumentos = CtxModelo.Documento.Where(x => x.RutaPc != null && x.Documento1 != null).Take(numeroDeDocumentos).ToList();
                 }
-                else if (estadoDeFiltro == EstadoDeFiltro.Todos)
+                else if (estadoDeFiltro == EstadoDeFiltro.SinArchivos)
                 {
-                    listaDocumentos = CtxModelo.Documento.Take(numeroDeDocumentos).ToList();
+                    listaDocumentos = CtxModelo.Documento.Where(x => x.Documento1 == null).ToList();
                 }
                 else if (estadoDeFiltro == EstadoDeFiltro.PendientesDeCarga)
                 {
 
-                    listaDocumentos = CtxModelo.Documento.Where(x => x.RutaPc == null).Take(numeroDeDocumentos).ToList();
+                    listaDocumentos = CtxModelo.Documento.Where(x => x.RutaPc == null && x.Documento1 != null).Take(numeroDeDocumentos).ToList();
 
                 }
 
@@ -113,43 +112,14 @@ namespace Sistema.UI.Judicial
 
         private void btnCargarDocumentos_Click(object sender, EventArgs e)
         {
-            CargarDocumentos();
+           GestionDeDocumentos.CargarDocumentos(listaDocumentos,ref listaDocumentosCreados);
+           GuardarRutasDeArchivo();
         }
 
         /// <summary>
         /// Carga documentos segun la variable cantidad 
         /// </summary>
-        private void CargarDocumentos()
-        {
-
-            foreach (var documento in listaDocumentos)
-            {
-                    string nombreDeArchivo = $"{documento.IdDocumento.ToString()}-{documento.Nombre}{documento.Extension}";
-                    if (ValidacionDeCreacionDeArchivo(rutaAGuardar , nombreDeArchivo))
-                    {
-                        try
-                        {
-                            string ruta = Path.Combine(rutaAGuardar, nombreDeArchivo);
-                            using (var fileStream = new FileStream(ruta, FileMode.Create))
-                            {
-                                fileStream.Write(documento.Documento1, 0, documento.Documento1.Length);
-                            }
-                         
-                            documento.RutaPc = ruta;
-                            listaDocumentosCreados.Add(documento);
-                        }
-                        catch (Exception ex)
-                        {
-
-                        }
-                      
-                    }
-                    
-            }
-
-            GuardarRutasDeArchivo();
-                  
-        }
+       
 
         private void GuardarRutasDeArchivo() {
 
@@ -158,46 +128,10 @@ namespace Sistema.UI.Judicial
 
         }
 
-        private bool ValidacionDeCreacionDeArchivo(string ruta , string nombreArchivo) {
-
-            bool resultadoDeValidacionDeArchivo = false;
-            try
-            {
-                if (!Directory.Exists(ruta))
-                {
-                    Directory.CreateDirectory(ruta);
-                }
-
-                if (File.Exists(nombreArchivo))
-                {
-
-                    resultadoDeValidacionDeArchivo = false;
-
-                }
-                else
-                {
-                    resultadoDeValidacionDeArchivo = true;
-                }
-            }
-            catch (Exception)
-            {
-                resultadoDeValidacionDeArchivo = false;
-            }
-
-
-            return resultadoDeValidacionDeArchivo;
-
-
-
-        }
-
+     
         private void cmbFiltro_RightToLeftChanged(object sender, EventArgs e)
         {
-            if (cmbFiltro.Focused)
-            {
-                
-            }
-           
+                       
 
         }
     }
