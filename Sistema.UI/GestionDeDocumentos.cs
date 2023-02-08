@@ -11,7 +11,7 @@ namespace Sistema.UI
     public class GestionDeDocumentos
     {
 
-        private static string rutaAGuardar = "D:\\Archivos";
+        private static string rutaAGuardar = @"\\172.18.12.10\comp\Archivos";
 
         public static void CargarDocumentos(List<Documento> listaDocumentos ,ref List<Documento>  listaDocumentosCreados)
         {
@@ -36,15 +36,12 @@ namespace Sistema.UI
                         }
                         catch (Exception ex)
                         {
-
+                            throw ex;
                         }
 
                     }
                 }
             }
-
-           
-
         }
 
         public static string GenerarRutaPorDefecto(string nombreArchivo) {
@@ -86,5 +83,6 @@ namespace Sistema.UI
 
 
         }
+
     }
 }

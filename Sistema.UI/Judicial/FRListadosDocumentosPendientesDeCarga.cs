@@ -24,7 +24,7 @@ namespace Sistema.UI.Judicial
     {
 
         public enum EstadoDeFiltro {   SinArchivos , PendientesDeCarga , Cargados };
-        private const int numeroDeDocumentos = 2000;
+        private const int numeroDeDocumentos = 20;
         private List<Documento> listaDocumentos = new List<Documento>();
         private List<Documento> listaDocumentosCreados=new List<Documento>();
         public EstadoDeFiltro estadoDeFiltroActual =  EstadoDeFiltro.PendientesDeCarga;
@@ -101,9 +101,6 @@ namespace Sistema.UI.Judicial
             
         }
 
-
-
-
         private void btnMostrar_Click(object sender, EventArgs e)
         {
             
@@ -131,7 +128,7 @@ namespace Sistema.UI.Judicial
      
         private void cmbFiltro_RightToLeftChanged(object sender, EventArgs e)
         {
-                       
+         
 
         }
     }
