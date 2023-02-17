@@ -471,12 +471,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdTipoProcesoGridLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit2View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deFechaProximaAudidateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deFechaProximaAudidateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deFechaVEncimientoDateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deFechaProximaAudidateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deFechaVEncimientoDateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FechaInicioDateEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deFechaVEncimientoDateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FechaInicioDateEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FechaInicioDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdClaseProcesoGridLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.glueArchivadoGridLookUpEdit1.Properties)).BeginInit();
@@ -647,6 +647,7 @@
             // 
             // 
             // 
+            this.RibbonForm.SearchEditItem.AccessibleName = "Search Item";
             this.RibbonForm.SearchEditItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
             this.RibbonForm.SearchEditItem.EditWidth = 150;
             this.RibbonForm.SearchEditItem.Id = -5000;

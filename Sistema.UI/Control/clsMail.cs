@@ -135,14 +135,14 @@ namespace Sistema.UI.Control
 
             var dataMail = ctx.TipoContenido.Where(x => x.TipoInterno == "TIPOCONTENIDO").ToList();
 
-            foreach (var data in Lexpediente)
-                sb.AppendLine("<tr>" +
-                              "<td><b>" + data.Codigo + "</b></td>" +
-                              "<td>" + data.FechaInicio.Value.ToShortDateString() + "</td>" +
-                              "<td>" + data.Descripcion + "</td>" +
-                                "<td>" + data.MontoSoles + "</td>" +
-                              "</tr>");
-            sb.AppendLine("</table><br/><br/>");
+            //foreach (var data in Lexpediente)
+            //    sb.AppendLine("<tr>" +
+            //                  "<td><b>" + data.Codigo + "</b></td>" +
+            //                  "<td>" + data.FechaInicio.Value.ToShortDateString() + "</td>" +
+            //                  "<td>" + data.Descripcion + "</td>" +
+            //                    "<td>" + data.MontoSoles + "</td>" +
+            //                  "</tr>");
+            //sb.AppendLine("</table><br/><br/>");
             //sb.AppendLine("<a><img src='http://www.image-share.com/upload/3254/240.jpg'</a>");            
           //  var to = "steverosale@gmail.com";
             var to = dbUserMailJefe.Abreviado.ToString();//Este es el correo del Jefe de Area
