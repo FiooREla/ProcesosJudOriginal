@@ -233,7 +233,6 @@ namespace Sistema.UI.Judicial
             }
             else
             {
-
                 viewExpediente oViewExpediente = (viewExpediente)bsLista.Current;
 
 
@@ -341,13 +340,14 @@ namespace Sistema.UI.Judicial
                     oExpediente.IdDemandado = null;
                     oExpediente.NDemandados = "";
                 }
-                //// CONSULTAR FIO
-                //var lExpedienteExis = CtxModelo.Expediente.Where(x => x.IdDemandante == oExpediente.IdDemandante && oExpediente.IdDemandante != 289).ToList();
-                //if (lExpedienteExis.Count > 0 && TipoEdicion == EnumEdicion.Nuevo)
-                //{
-                //    var oMail = new Control.clsMail();
-                //    oMail.FnMail_DemandasExistentes(oExpediente.NDemandantes, lExpedienteExis);
-                //}
+                //
+                var lExpedienteExis = CtxModelo.Expediente.Where(x => x.IdDemandante == oExpediente.IdDemandante && oExpediente.IdDemandante != 289).ToList();
+                if (lExpedienteExis.Count > 0 && TipoEdicion == EnumEdicion.Nuevo)
+                {
+                    var oMail = new Control.clsMail();
+                    oMail.FnMail_DemandasExistentes(oExpediente.NDemandantes, lExpedienteExis);
+                }
+
 
             }
 
@@ -362,7 +362,7 @@ namespace Sistema.UI.Judicial
             if (bsDocumentos.Count > 0)
             {
                 ctxModeloDOC.SaveChanges();
-                DeleteFiles();
+               
             }
 
             CtxModelo.SaveChanges();
@@ -659,12 +659,12 @@ namespace Sistema.UI.Judicial
             {
                 this.ofdAll.InitialDirectory = tipoContenido.Descripcion.ToString();
             }
-
+            //abre cuadro para escoger archivo
             if (this.ofdAll.ShowDialog() == DialogResult.Cancel)
                 return;
 
             //string sRuta = ofdAll.FileName;
-
+            //coloca en array la cantidad de archivos
             string[] files = ofdAll.FileNames;
             if (files.Count() == 0) return;
             if (gridView3.FocusedRowHandle < 0)
@@ -688,7 +688,24 @@ namespace Sistema.UI.Judicial
                     ((Documento)bsDocumentos.Current).Nombre = Path.GetFileNameWithoutExtension(item);
                     ((Documento)bsDocumentos.Current).Documento1 = ExtFile.FileToBits(item);
                     ((Documento)bsDocumentos.Current).Extension = Path.GetExtension(item);
-                    ((Documento)bsDocumentos.Current).RutaPc = GestionDeDocumentos.GenerarRutaPorDefecto(Path.GetFileName(item));
+                    
+
+
+                    Documento  documentoActual = (Documento)bsDocumentos.Current;
+
+                    string nombreDeArchivo = $"{documentoActual.IdNEWID}-{documentoActual.Nombre}{documentoActual.Extension}";
+                    bool resultadoDeCargar = GestionDeDocumentos.CargarDocumentosIndividual(nombreDeArchivo, (Documento)bsDocumentos.Current);
+                    if (resultadoDeCargar)
+                    {
+                        ((Documento)bsDocumentos.Current).RutaPc = GestionDeDocumentos.GenerarRutaPorDefecto(Path.GetFileName(item));
+
+                    }
+                    else
+                    {
+                        ((Documento)bsDocumentos.Current).RutaPc = "";
+                    }
+                   
+
                     // bsDocumentos.Remove(oFileInsert);
                 }
 
@@ -696,12 +713,44 @@ namespace Sistema.UI.Judicial
             }
             else
             {
+
+
                 XtraMessageBox.Show("Se actualizara un solo archivo. ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Documento documentoAntiguo = new Documento();
+                documentoAntiguo.IdNEWID = ((Documento)bsDocumentos.Current).IdNEWID;
+                documentoAntiguo.Nombre = ((Documento)bsDocumentos.Current).Nombre;
+                documentoAntiguo.Documento1 = ((Documento)bsDocumentos.Current).Documento1;
+                documentoAntiguo.Extension = ((Documento)bsDocumentos.Current).Extension;
+                documentoAntiguo.RutaPc = ((Documento)bsDocumentos.Current).RutaPc;
+                
                 ((Documento)bsDocumentos.Current).IdNEWID = EntidadExpediente.IdNEWID;
                 ((Documento)bsDocumentos.Current).Nombre = Path.GetFileNameWithoutExtension(files[0]);
                 ((Documento)bsDocumentos.Current).Documento1 = ExtFile.FileToBits(files[0]);
                 ((Documento)bsDocumentos.Current).Extension = Path.GetExtension(files[0]);
-                ((Documento)bsDocumentos.Current).RutaPc = GestionDeDocumentos.GenerarRutaPorDefecto(Path.GetFileName(files[0]));
+               
+
+                Documento documentoActual = (Documento)bsDocumentos.Current;
+                string nombreDeArchivo = $"{documentoActual.Nombre}{documentoActual.Extension}";
+
+                bool resultadoDeCargar = GestionDeDocumentos.CargarDocumentosIndividual(nombreDeArchivo, (Documento)bsDocumentos.Current);
+                if (resultadoDeCargar)
+                {
+                    ((Documento)bsDocumentos.Current).RutaPc = GestionDeDocumentos.GenerarRutaPorDefecto(Path.GetFileName(files[0]));
+                    ;
+                }
+                else
+                {
+
+                    ((Documento)bsDocumentos.Current).IdNEWID = documentoAntiguo.IdNEWID;
+                    ((Documento)bsDocumentos.Current).Nombre = documentoAntiguo.Nombre;
+                    ((Documento)bsDocumentos.Current).Documento1 = documentoAntiguo.Documento1;
+                    ((Documento)bsDocumentos.Current).Extension = documentoAntiguo.Extension;
+                    ((Documento)bsDocumentos.Current).RutaPc = documentoAntiguo.RutaPc;
+
+
+                    XtraMessageBox.Show("Error al guardar el archivo. No se guardará el archivo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
             }
             //    txtRutaFile.Text = sRuta;

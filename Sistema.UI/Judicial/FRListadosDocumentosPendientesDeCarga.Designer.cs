@@ -76,11 +76,12 @@
             // 
             // 
             // 
+            this.RibbonForm.SearchEditItem.AccessibleName = "Search Item";
             this.RibbonForm.SearchEditItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
             this.RibbonForm.SearchEditItem.EditWidth = 150;
             this.RibbonForm.SearchEditItem.Id = -5000;
             this.RibbonForm.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.RibbonForm.Size = new System.Drawing.Size(1062, 126);
+            this.RibbonForm.Size = new System.Drawing.Size(1328, 126);
             // 
             // bsLista
             // 
@@ -104,7 +105,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.RibbonForm;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1038, 440);
+            this.gridControl1.Size = new System.Drawing.Size(1304, 615);
             this.gridControl1.TabIndex = 7;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -171,7 +172,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 126);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1062, 516);
+            this.layoutControl1.Size = new System.Drawing.Size(1328, 691);
             this.layoutControl1.TabIndex = 2;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -180,9 +181,9 @@
             this.btnMostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnMostrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMostrar.ImageOptions.Image = global::Sistema.UI.Properties.Resources.Search216x16;
-            this.btnMostrar.Location = new System.Drawing.Point(479, 12);
+            this.btnMostrar.Location = new System.Drawing.Point(598, 12);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(120, 22);
+            this.btnMostrar.Size = new System.Drawing.Size(152, 22);
             this.btnMostrar.StyleController = this.layoutControl1;
             this.btnMostrar.TabIndex = 6;
             this.btnMostrar.Text = "Buscar";
@@ -192,9 +193,9 @@
             // 
             this.btnCargarDocumentos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCargarDocumentos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCargarDocumentos.Location = new System.Drawing.Point(908, 482);
+            this.btnCargarDocumentos.Location = new System.Drawing.Point(1137, 657);
             this.btnCargarDocumentos.Name = "btnCargarDocumentos";
-            this.btnCargarDocumentos.Size = new System.Drawing.Size(142, 22);
+            this.btnCargarDocumentos.Size = new System.Drawing.Size(179, 22);
             this.btnCargarDocumentos.StyleController = this.layoutControl1;
             this.btnCargarDocumentos.TabIndex = 6;
             this.btnCargarDocumentos.Text = "Cargar Documentos";
@@ -207,7 +208,7 @@
             this.cmbFiltro.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbFiltro.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbFiltro.Size = new System.Drawing.Size(251, 20);
+            this.cmbFiltro.Size = new System.Drawing.Size(346, 20);
             this.cmbFiltro.StyleController = this.layoutControl1;
             this.cmbFiltro.TabIndex = 8;
             this.cmbFiltro.RightToLeftChanged += new System.EventHandler(this.cmbFiltro_RightToLeftChanged);
@@ -226,7 +227,7 @@
             this.emptySpaceItem3,
             this.layoutControlItem3});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1062, 516);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1328, 691);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem4
@@ -235,7 +236,7 @@
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 26);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(1042, 444);
+            this.layoutControlItem4.Size = new System.Drawing.Size(1308, 619);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -244,9 +245,9 @@
             this.layoutControlItem1.Control = this.btnCargarDocumentos;
             this.layoutControlItem1.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem1.Location = new System.Drawing.Point(896, 470);
+            this.layoutControlItem1.Location = new System.Drawing.Point(1125, 645);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(146, 26);
+            this.layoutControlItem1.Size = new System.Drawing.Size(183, 26);
             this.layoutControlItem1.Text = "layoutControlItem3";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
@@ -258,41 +259,41 @@
             this.layoutControlItem2.CustomizationFormText = "Seleccionar búsqueda";
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(371, 26);
+            this.layoutControlItem2.Size = new System.Drawing.Size(466, 26);
             this.layoutControlItem2.Text = "Seleccionar búsqueda";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(104, 13);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 470);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 645);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(896, 26);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(1125, 26);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(371, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(466, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(96, 26);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(120, 26);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(591, 0);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(742, 0);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(451, 26);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(566, 26);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnMostrar;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(467, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(586, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(124, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -300,7 +301,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1062, 669);
+            this.ClientSize = new System.Drawing.Size(1328, 844);
             this.Controls.Add(this.layoutControl1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRListadosDocumentosPendientesDeCarga";

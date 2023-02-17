@@ -5,13 +5,14 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Sistema.UI
 {
     public class GestionDeDocumentos
     {
 
-        private static string rutaAGuardar = @"\\172.18.12.10\comp\Archivos";
+        public const  string rutaAGuardar = @"\\10.113.1.45\sis_pj";
 
         public static void CargarDocumentos(List<Documento> listaDocumentos ,ref List<Documento>  listaDocumentosCreados)
         {
@@ -20,34 +21,58 @@ namespace Sistema.UI
             {
                 if (documento.Documento1 != null) {
 
-                    string nombreDeArchivo = $"{documento.IdDocumento.ToString()}-{documento.Nombre}{documento.Extension}";
-                    if (ValidacionDeCreacionDeArchivo(rutaAGuardar, nombreDeArchivo))
+                    string nombreDeArchivo = $"{documento.IdNEWID}-{documento.Nombre}{documento.Extension}";
+
+                    bool resultadoDeCarga = CargarDocumentosIndividual(nombreDeArchivo, documento);
+
+                   
+                    if (resultadoDeCarga)
                     {
-                        try
-                        {
-                            string ruta = Path.Combine(rutaAGuardar, nombreDeArchivo);
-                            using (var fileStream = new FileStream(ruta, FileMode.Create))
-                            {
-                                fileStream.Write(documento.Documento1, 0, documento.Documento1.Length);
-                            }
-
-                            documento.RutaPc = ruta;
-                            listaDocumentosCreados.Add(documento);
-                        }
-                        catch (Exception ex)
-                        {
-                            throw ex;
-                        }
-
+                        documento.RutaPc = GenerarRutaPorDefecto(nombreDeArchivo);
+                        listaDocumentosCreados.Add(documento);
                     }
+                  
                 }
             }
         }
 
-        public static string GenerarRutaPorDefecto(string nombreArchivo) {
 
+        public static bool CargarDocumentosIndividual( string nombreDeArchivo,  Documento documento)
+        {
+
+          
+            
+            if (ValidacionDeCreacionDeArchivo(rutaAGuardar, nombreDeArchivo))
+            {
+                try
+                {
+                    string ruta = Path.Combine(rutaAGuardar, nombreDeArchivo);
+                    using (var fileStream = new FileStream(ruta, FileMode.Create))
+                    {
+                        fileStream.Write(documento.Documento1, 0, documento.Documento1.Length);
+                    }
+
+                   
+                    return true;
+
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static string GenerarRutaPorDefecto(string nombreArchivo)
+        {
+            
             return Path.Combine(rutaAGuardar, nombreArchivo);
-        
+
         }
 
         private static bool ValidacionDeCreacionDeArchivo(string ruta, string nombreArchivo)

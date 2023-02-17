@@ -152,7 +152,7 @@
             // 
             // xrTablePartes
             // 
-            this.xrTablePartes.Font = new DevExpress.Drawing.DXFont("Tahoma", 9.75F);
+            this.xrTablePartes.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.xrTablePartes.LocationFloat = new DevExpress.Utils.PointFloat(10.00016F, 271.875F);
             this.xrTablePartes.Name = "xrTablePartes";
             this.xrTablePartes.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -166,7 +166,7 @@
             this.xrTableCell2,
             this.xrTableCell9,
             this.xrTableCell3});
-            this.xrTableRow2.Font = new DevExpress.Drawing.DXFont("Tahoma", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTableRow2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.xrTableRow2.Name = "xrTableRow2";
             this.xrTableRow2.StylePriority.UseFont = false;
             this.xrTableRow2.Weight = 1D;
@@ -191,7 +191,7 @@
             // 
             // xrLabel11
             // 
-            this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Tahoma", 10.5F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel11.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Bold);
             this.xrLabel11.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(6.357829E-05F, 233.3333F);
             this.xrLabel11.Name = "xrLabel11";
@@ -207,7 +207,7 @@
             // 
             this.xrLabel27.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "MontoSoles")});
-            this.xrLabel27.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F);
+            this.xrLabel27.Font = new System.Drawing.Font("Tahoma", 10F);
             this.xrLabel27.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel27.LocationFloat = new DevExpress.Utils.PointFloat(552.0536F, 195.2076F);
             this.xrLabel27.Name = "xrLabel27";
@@ -221,7 +221,7 @@
             // 
             // xrLabel28
             // 
-            this.xrLabel28.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel28.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.xrLabel28.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel28.LocationFloat = new DevExpress.Utils.PointFloat(408.2176F, 195.2075F);
             this.xrLabel28.Name = "xrLabel28";
@@ -235,7 +235,7 @@
             // 
             // xrLabel21
             // 
-            this.xrLabel21.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel21.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.xrLabel21.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 195.2076F);
             this.xrLabel21.Name = "xrLabel21";
@@ -249,7 +249,7 @@
             // 
             // xrLabel26
             // 
-            this.xrLabel26.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F);
+            this.xrLabel26.Font = new System.Drawing.Font("Tahoma", 10F);
             this.xrLabel26.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(148.836F, 195.2076F);
             this.xrLabel26.Name = "xrLabel26";
@@ -262,7 +262,7 @@
             // 
             // xrLabel8
             // 
-            this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel8.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.xrLabel8.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(408.2178F, 165.8333F);
             this.xrLabel8.Name = "xrLabel8";
@@ -276,7 +276,7 @@
             // 
             // xrLabel49
             // 
-            this.xrLabel49.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F);
+            this.xrLabel49.Font = new System.Drawing.Font("Tahoma", 10F);
             this.xrLabel49.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel49.LocationFloat = new DevExpress.Utils.PointFloat(552.0538F, 165.8333F);
             this.xrLabel49.Name = "xrLabel49";
@@ -291,7 +291,7 @@
             // 
             this.xrLabel6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Descripcion")});
-            this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F);
+            this.xrLabel6.Font = new System.Drawing.Font("Tahoma", 10F);
             this.xrLabel6.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(148.836F, 165.8333F);
             this.xrLabel6.Name = "xrLabel6";
@@ -305,7 +305,7 @@
             // 
             // xrLabel7
             // 
-            this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel7.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.xrLabel7.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(10.00016F, 165.8333F);
             this.xrLabel7.Name = "xrLabel7";
@@ -321,7 +321,7 @@
             // 
             this.xrLabel47.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ClaseProceso.Descripcion")});
-            this.xrLabel47.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F);
+            this.xrLabel47.Font = new System.Drawing.Font("Tahoma", 10F);
             this.xrLabel47.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel47.LocationFloat = new DevExpress.Utils.PointFloat(148.8358F, 138.8334F);
             this.xrLabel47.Name = "xrLabel47";
@@ -335,7 +335,7 @@
             // 
             // xrLabel48
             // 
-            this.xrLabel48.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel48.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.xrLabel48.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel48.LocationFloat = new DevExpress.Utils.PointFloat(10.00016F, 138.8334F);
             this.xrLabel48.Name = "xrLabel48";
@@ -349,7 +349,7 @@
             // 
             // xrLabel43
             // 
-            this.xrLabel43.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel43.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.xrLabel43.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel43.LocationFloat = new DevExpress.Utils.PointFloat(408.2178F, 111.8334F);
             this.xrLabel43.Name = "xrLabel43";
@@ -365,7 +365,7 @@
             // 
             this.xrLabel44.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "TipoProceso.Descripcion")});
-            this.xrLabel44.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F);
+            this.xrLabel44.Font = new System.Drawing.Font("Tahoma", 10F);
             this.xrLabel44.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel44.LocationFloat = new DevExpress.Utils.PointFloat(552.0537F, 111.8334F);
             this.xrLabel44.Name = "xrLabel44";
@@ -379,7 +379,7 @@
             // 
             // xrLabel42
             // 
-            this.xrLabel42.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel42.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.xrLabel42.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel42.LocationFloat = new DevExpress.Utils.PointFloat(10.00016F, 111.8334F);
             this.xrLabel42.Name = "xrLabel42";
@@ -393,7 +393,7 @@
             // 
             // xrLabel1
             // 
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.xrLabel1.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(408.2177F, 84.83335F);
             this.xrLabel1.Name = "xrLabel1";
@@ -409,7 +409,7 @@
             // 
             this.xrLabel2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ExpedienteInstancia.OrganoJudicial.Localidad.Descripcion")});
-            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F);
+            this.xrLabel2.Font = new System.Drawing.Font("Tahoma", 10F);
             this.xrLabel2.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(552.0536F, 84.83335F);
             this.xrLabel2.Name = "xrLabel2";
@@ -425,7 +425,7 @@
             // 
             this.xrLabel20.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ExpedienteInstancia.InstanciaJudicial.Descripcion")});
-            this.xrLabel20.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F);
+            this.xrLabel20.Font = new System.Drawing.Font("Tahoma", 10F);
             this.xrLabel20.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(148.8358F, 84.83337F);
             this.xrLabel20.Name = "xrLabel20";
@@ -439,7 +439,7 @@
             // 
             // xrLabel18
             // 
-            this.xrLabel18.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel18.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.xrLabel18.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 84.83337F);
             this.xrLabel18.Name = "xrLabel18";
@@ -453,7 +453,7 @@
             // 
             // xrLabel5
             // 
-            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Tahoma", 11F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel5.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
             this.xrLabel5.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 22.87501F);
             this.xrLabel5.Name = "xrLabel5";
@@ -469,7 +469,7 @@
             // 
             this.xrLabel4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "FechaInicio", "{0:dd/MM/yyyy}")});
-            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F);
+            this.xrLabel4.Font = new System.Drawing.Font("Tahoma", 10F);
             this.xrLabel4.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(148.836F, 111.8334F);
             this.xrLabel4.Name = "xrLabel4";
@@ -483,7 +483,7 @@
             // 
             // xrLabel24
             // 
-            this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel24.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.xrLabel24.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 57.83335F);
             this.xrLabel24.Name = "xrLabel24";
@@ -499,7 +499,7 @@
             // 
             this.lbFechaCompleta.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Codigo")});
-            this.lbFechaCompleta.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.lbFechaCompleta.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.lbFechaCompleta.ForeColor = System.Drawing.Color.Navy;
             this.lbFechaCompleta.LocationFloat = new DevExpress.Utils.PointFloat(148.8358F, 57.83335F);
             this.lbFechaCompleta.Name = "lbFechaCompleta";
@@ -521,7 +521,7 @@
             // 
             // xrTable2
             // 
-            this.xrTable2.Font = new DevExpress.Drawing.DXFont("Tahoma", 9.75F);
+            this.xrTable2.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(12.5F, 12.5F);
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -535,14 +535,14 @@
             this.xr1,
             this.xr2,
             this.xr3});
-            this.xrTableRow3.Font = new DevExpress.Drawing.DXFont("Tahoma", 9.75F);
+            this.xrTableRow3.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.xrTableRow3.Name = "xrTableRow3";
             this.xrTableRow3.StylePriority.UseFont = false;
             this.xrTableRow3.Weight = 1D;
             // 
             // xr1
             // 
-            this.xr1.Font = new DevExpress.Drawing.DXFont("Tahoma", 9.75F);
+            this.xr1.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.xr1.Name = "xr1";
             this.xr1.StylePriority.UseFont = false;
             this.xr1.Text = "Parte";
@@ -550,7 +550,7 @@
             // 
             // xr2
             // 
-            this.xr2.Font = new DevExpress.Drawing.DXFont("Tahoma", 9.75F);
+            this.xr2.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.xr2.Name = "xr2";
             this.xr2.StylePriority.UseFont = false;
             this.xr2.Text = "Tipo Persona";
@@ -558,7 +558,7 @@
             // 
             // xr3
             // 
-            this.xr3.Font = new DevExpress.Drawing.DXFont("Tahoma", 9.75F);
+            this.xr3.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.xr3.Name = "xr3";
             this.xr3.StylePriority.UseFont = false;
             this.xr3.Text = "Apellidos y Nombres  / Razón Social";
@@ -566,7 +566,7 @@
             // 
             // xrLabel9
             // 
-            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Tahoma", 7F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel9.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Bold);
             this.xrLabel9.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(9.536743E-05F, 40.54165F);
             this.xrLabel9.Multiline = true;
@@ -600,7 +600,7 @@
             // xrTable1
             // 
             this.xrTable1.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrTable1.Font = new DevExpress.Drawing.DXFont("Tahoma", 12F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTable1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(12.04166F, 38.12501F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -624,7 +624,7 @@
             // 
             // xrTableCell4
             // 
-            this.xrTableCell4.Font = new DevExpress.Drawing.DXFont("Tahoma", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTableCell4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.xrTableCell4.Name = "xrTableCell4";
             this.xrTableCell4.StylePriority.UseFont = false;
             this.xrTableCell4.StylePriority.UseTextAlignment = false;
@@ -634,7 +634,7 @@
             // 
             // xrTableCell1
             // 
-            this.xrTableCell1.Font = new DevExpress.Drawing.DXFont("Tahoma", 12F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTableCell1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.xrTableCell1.Name = "xrTableCell1";
             this.xrTableCell1.StylePriority.UseFont = false;
             this.xrTableCell1.Text = ":";
@@ -644,7 +644,7 @@
             // 
             this.xrTableCell10.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ActoProcesal.FechaRecepcion", "{0:d}")});
-            this.xrTableCell10.Font = new DevExpress.Drawing.DXFont("Tahoma", 9F);
+            this.xrTableCell10.Font = new System.Drawing.Font("Tahoma", 9F);
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.StylePriority.UseFont = false;
             this.xrTableCell10.StylePriority.UseTextAlignment = false;
@@ -654,7 +654,7 @@
             // 
             // xrTableCell8
             // 
-            this.xrTableCell8.Font = new DevExpress.Drawing.DXFont("Tahoma", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTableCell8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.StylePriority.UseFont = false;
             this.xrTableCell8.StylePriority.UseTextAlignment = false;
@@ -666,7 +666,7 @@
             // 
             this.xrTableCell7.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "TipoContenido.Descripcion", "{0:n3}")});
-            this.xrTableCell7.Font = new DevExpress.Drawing.DXFont("Tahoma", 9F);
+            this.xrTableCell7.Font = new System.Drawing.Font("Tahoma", 9F);
             this.xrTableCell7.Name = "xrTableCell7";
             this.xrTableCell7.StylePriority.UseFont = false;
             this.xrTableCell7.StylePriority.UseTextAlignment = false;
@@ -687,7 +687,7 @@
             // 
             // xrTableCell21
             // 
-            this.xrTableCell21.Font = new DevExpress.Drawing.DXFont("Tahoma", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTableCell21.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.xrTableCell21.Name = "xrTableCell21";
             this.xrTableCell21.StylePriority.UseFont = false;
             this.xrTableCell21.StylePriority.UseTextAlignment = false;
@@ -707,7 +707,7 @@
             // 
             this.xrTableCell23.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ActoProcesal.Codigo")});
-            this.xrTableCell23.Font = new DevExpress.Drawing.DXFont("Tahoma", 9F);
+            this.xrTableCell23.Font = new System.Drawing.Font("Tahoma", 9F);
             this.xrTableCell23.Name = "xrTableCell23";
             this.xrTableCell23.StylePriority.UseFont = false;
             this.xrTableCell23.StylePriority.UseTextAlignment = false;
@@ -736,7 +736,7 @@
             // 
             // xrTableCell26
             // 
-            this.xrTableCell26.Font = new DevExpress.Drawing.DXFont("Tahoma", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTableCell26.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.xrTableCell26.Name = "xrTableCell26";
             this.xrTableCell26.StylePriority.UseFont = false;
             this.xrTableCell26.StylePriority.UseTextAlignment = false;
@@ -756,7 +756,7 @@
             // 
             this.xrTableCell28.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ActoProcesal.Contenido")});
-            this.xrTableCell28.Font = new DevExpress.Drawing.DXFont("Tahoma", 9F);
+            this.xrTableCell28.Font = new System.Drawing.Font("Tahoma", 9F);
             this.xrTableCell28.Name = "xrTableCell28";
             this.xrTableCell28.StylePriority.UseFont = false;
             this.xrTableCell28.StylePriority.UseTextAlignment = false;
@@ -766,7 +766,7 @@
             // 
             // xrLabel3
             // 
-            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Tahoma", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.xrLabel3.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 0F);
             this.xrLabel3.Name = "xrLabel3";
@@ -806,7 +806,7 @@
             this.PageFooter,
             this.DetailReport});
             this.DataSource = this.bsLista;
-            this.Margins = new DevExpress.Drawing.DXMargins(6, 9, 0, 127);
+            this.Margins = new System.Drawing.Printing.Margins(6, 9, 0, 127);
             this.PageHeight = 1169;
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
